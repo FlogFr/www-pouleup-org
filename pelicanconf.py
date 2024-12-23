@@ -1,6 +1,6 @@
 AUTHOR = 'Poule UP'
 SITENAME = 'Poule UP'
-SITEURL = ""
+SITEURL = "https://pouleup.org"
 
 PATH = "content"
 
@@ -15,12 +15,14 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+THEME = "themes/kitzu"
+THEME_STATIC_DIR = 'theme'
+
+FORMATTED_FIELDS = []
+
 # Blogroll
 LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
+    ("Formation et Consulting autour de Kubernetes et des technologies Cloud", "#"),
 )
 
 # Social widget
@@ -33,3 +35,27 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+# Uncomment following line if you want document-relative URLs when developing
+# RELATIVE_URLS = True
+STATIC_PATHS = ['images', 'assets', 'extra']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},'extra/robots.txt': {'path': 'robots.txt'},}
+
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 0.5,
+        "indexes": 0.5,
+        "pages": 0.5
+    },
+    "changefreqs": {
+        "articles": "weekly",
+        "indexes": "daily",
+        "pages": "monthly"
+    },
+    "exclude": [
+        "^/noindex/",  # starts with "/noindex/"
+        "/tag/",       # contains "/tag/"
+        "\.json$",     # ends with ".json"
+    ]
+}
