@@ -39,7 +39,7 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 STATIC_PATHS = ['images', 'assets', 'extra']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},'extra/robots.txt': {'path': 'robots.txt'},}
+EXTRA_PATH_METADATA = {'extra/robots.txt': {'path': 'robots.txt'},}
 
 SITEMAP = {
     "format": "xml",
