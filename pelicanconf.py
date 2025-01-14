@@ -1,6 +1,7 @@
-AUTHOR = 'Poule UP'
-SITENAME = 'Poule UP'
-SITEURL = "https://flogfr.github.io/www-pouleup-org"
+AUTHOR = 'POULE UP'
+SITENAME = 'POULE UP'
+SITEURL = "https://pouleup.org"
+# SITEURL = "https://flogfr.github.io/www-pouleup-org"
 
 PATH = "content"
 
