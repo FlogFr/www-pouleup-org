@@ -61,15 +61,18 @@
       </ul>
     </div>
   </nav>
+
   <!-- Home-->
   <section class="home-area element-cover-bg video-variant" id="home" style="background-image:url(theme/img/background-poule-up.png)">
     <div class="player" id="homeVideo" data-property="{videoURL:'https://youtu.be/pbbRtGXMiIo',containment:'#home',autoPlay:true, mute:true, showControls:false, stopMovieOnBlur:false, showYTLogo: false}"></div>
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center">
         <div class="col-12 col-lg-8 home-content text-center">
-          <h1 class="">
-            <img class="img-fluid" style="height: 400px;" src="theme/img/img-pouleup-logo.png" alt="Logo Association POULE UP" />
-          </h1>
+          <a href="#festival" id="btn-festival" >
+              <h1 class="">
+                <img class="img-fluid" style="height: 400px;" src="theme/img/img-pouleup-logo.png" alt="Logo Association POULE UP" />
+              </h1>
+          </a>
           <h4 class="cd-headline clip home-headline">Nous sommes <span class="cd-words-wrapper single-headline"><b class="is-visible">une association</b><b>un festival</b><b>un collectif</b></span></h4>
         </div>
       </div>
@@ -85,6 +88,7 @@
       </div>
     </div>
   </section>
+
   <!-- À propos lightbox-->
   <div class="lightbox-wrapper" id="apropos" data-simplebar>
     <div class="container">
@@ -204,14 +208,13 @@ Nous prendrons racine en loire-atlantique cette années
 
                       <p style="text-align: center;">
                       <a href="https://www.helloasso.com/associations/association-poule-up/evenements/poule-up-festival-2025"><button class="btn button-main button-scheme" id="contact-submit" type="submit">Billetterie</button></a>
+                    <br/>
+                    <br/>
+                      <a onclick="document.getElementById('lineup').scrollIntoView({ behavior: 'smooth' })" ><button class="btn button-main button-scheme">Line up</button></a>
                       </p>
 
                       <p>
 <br/>
-<br/>
-Évènement privé sur invitation
-<br/>
-[ 𝐋𝐢𝐧𝐞𝐮𝐩 𝐚̀ 𝐯𝐞𝐧𝐢𝐫 ]
 <br/>
 𝐈𝐧𝐟𝐨𝐬 𝐩𝐫𝐚𝐭𝐢𝐪𝐮𝐞𝐬
 <br/>
@@ -263,6 +266,9 @@ Nous serons particulièrement vigilants à la prévention et la sécurité sur s
               </div>
             </div>
             <!-- End of Info section-->
+
+            <!-- Anchor LINE UP -->
+            <div id="lineup"></div>
 
             <!-- Artist BubbleJam section-->
             <div class="info-section single-section">

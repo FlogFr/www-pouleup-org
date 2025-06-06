@@ -163,6 +163,37 @@
       });
     });
 
+    $('#btn-festival').animatedModal({
+      animatedIn: 'fadeIn',
+      animatedOut: 'fadeOut',
+      animationDuration: '0s',
+      beforeOpen: function() {
+        $('#overlay-effect').addClass('animate-up').removeClass('animate-down');
+        $('#' + this.modalTarget).css({
+          'animationDelay': '.5s',
+          'animationFillMode': 'both'
+        });
+      },
+      afterOpen: function() {
+        $('#' + this.modalTarget).css({
+          'animationFillMode': 'none'
+        });
+      },
+      beforeClose: function() {
+        $('#overlay-effect').addClass('animate-down').removeClass('animate-up');
+        $('#' + this.modalTarget).css({
+          'animationDelay': '.5s',
+          'animationFillMode': 'both'
+        });
+      },
+      afterClose: function() {
+        $('#' + this.modalTarget).css({
+          'animationFillMode': 'none'
+        });
+      }
+    });
+
+
     $('.lightbox-wrapper').each(function() {
       if (!$('.navbar .navbar-nav .nav-link[href^="#' + this.id + '"]').length) {
         $(this).hide();
