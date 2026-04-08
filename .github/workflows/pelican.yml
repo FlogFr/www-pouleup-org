@@ -35,6 +35,10 @@ jobs:
       - name: Build site
         run: pelican content -o output -s pelicanconf.py
 
+      # 4.5) Ajouter le fichier CNAME
+      - name: Add CNAME for custom domain
+        run: echo "pouleup.org" > output/CNAME
+
       # 5) Deployment sur gh-pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
