@@ -3,36 +3,41 @@ name: Build and Deploy Pelican Site
 on:
   push:
     branches:
-      - main  # ou la branche source de ton contenu
+      - main  # Branche source à surveiller
+
+permissions:
+  contents: write  # nécessaire pour push vers gh-pages
 
 jobs:
-  build-and-deploy:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repository
+      # 1) Checkout du repo
       - name: Checkout repository
-        uses: actions/checkout@v3
-
-      # 2. Setup Python
-      - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/checkout@v4
         with:
-          python-version: '3.11'  # adapte selon ton besoin
+          fetch-depth: 0
 
-      # 3. Install Pelican and dependencies
+      # 2) Installer Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3) Installer Pelican + dépendances
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pelican markdown
 
-      # 4. Build the Pelican site
+      # 4) Build du site Pelican
       - name: Build site
         run: pelican content -o output -s pelicanconf.py
 
-      # 5. Deploy to gh-pages
+      # 5) Deployment sur gh-pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v6
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
