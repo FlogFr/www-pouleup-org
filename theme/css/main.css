@@ -1634,6 +1634,7 @@ hr {
 
 .portfolio-section .portfolio-grid .portfolio-wrapper>.img-fluid {
   width: 100%;
+  opacity: 50;
 }
 
 .portfolio-section .portfolio-grid .portfolio-wrapper .item-content {
