@@ -1633,8 +1633,7 @@ hr {
 }
 
 .portfolio-section .portfolio-grid .portfolio-wrapper>.img-fluid {
-  width: 200%;
-  opacity: 50;
+  width: 100%;
 }
 
 .portfolio-section .portfolio-grid .portfolio-wrapper .item-content {
